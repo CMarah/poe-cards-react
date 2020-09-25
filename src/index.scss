@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  color: #fff;
+  background: #424854;
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.menu {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 2em;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.budget {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.budget-text {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-width: 1px 0px 1px 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgb(136, 136, 136);
+  border-bottom-color: rgb(136, 136, 136);
+  border-left-color: rgb(136, 136, 136);
+  border-image: initial;
+  background-color: rgba(50, 50, 50, 0.5);
+  white-space: nowrap;
+  border-right-style: initial;
+  border-right-color: initial;
+  padding: 0px 8px;
+  height: 36px;
+}
+
+.budget-input {
+  border: 1px solid rgb(136, 136, 136);
+  background: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+  padding: 0px;
+  padding-left: 8px;
+  width: 120px;
+  height: 36px;
+}
+
+.league-selector {
+  display: flex;
+
+  select {
+    font-size: 16px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    width: 240px;
+    padding: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 0;
+    display: block;
+    height: 36px;
+    text-align: center;
+    color: #fff;
+    background: #111;
+    background-color: #0F90CC;
+  }
+
+  option {
+    background: #111;
+  }
+
+  &.list-mode {
+    a {
+      width: 250px;
+      display: block;
+      padding: 15px;
+      text-align: center;
+    }
+    select {
+      border: 1px solid #777;
+      box-sizing: border-box;
+
+      background-color: fade-out(#0F90CC, .6);
+      color: #222;
+      text-decoration: none;
+
+      margin-top: 5px;
+      margin-left: 5px;
+
+      &:hover {
+        box-shadow: 0 0 10px #0f90cc;
+        border-color: #0f90cc;
+        text-shadow: 0 0 6px #ccc;
+      }
+    }
+  }
+}
+
+.table-striped {
+  border-collapse: collapse;
+  width: 100%;
+
+  td, th {
+    line-height: 2.5rem;
+    vertical-align: top;
+    padding: 0 .4rem;
+    cursor: default;
+  }
+
+  th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 30px;
+  }
+
+  thead:first-child > tr th {
+    background-color: hsl(0, 0%, 20%);
+  }
+
+  tbody > tr:nth-of-type(odd) {
+    background-color: hsl(0, 0%, 16%);
+  }
+
+  tbody > tr:nth-of-type(even) {
+    background-color: hsl(0, 0%, 12%);
+  }
+
+  tbody > tr:hover {
+    background-color: hsl(0, 0%, 8%);
+  }
+
+  td {
+    cursor: pointer;
+  }
+
+}
