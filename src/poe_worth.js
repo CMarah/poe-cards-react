@@ -3,7 +3,7 @@ const fetch = require('isomorphic-fetch');
 const ITEMS_TO_HIDE = ["Precursor's Emblem", "Soul Taker"];
 const EXCEPTION_CARDS = ['Wealth and Power', "The Dragon's Heart"];
 
-module.exports.downloadData = async league => {
+const downloadData = async league => {
   const fetchPoeNinja = type => fetch(
     'https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/' +
     `${type === 'Currency' ? 'currencyoverview' : 'itemoverview'}?league=${league}&type=${type}`
@@ -89,7 +89,7 @@ const getItem = (item, type, info) => {
 
 const myNumber = num => parseFloat(num.toFixed(0)).toLocaleString();
 
-module.exports.getResults = (data, min_budget, max_budget, league) => {
+const getResults = (data, min_budget, max_budget, league) => {
   const clean_cards = getCardsMap(data.card_info);
 
   const trades = clean_cards.map(card => {
@@ -126,3 +126,5 @@ module.exports.getResults = (data, min_budget, max_budget, league) => {
 
 //TODO the bargain
 //TODO the white knight
+
+export { getResults, downloadData };
